@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColorPicker.MainPage" BackgroundColor="Orange" x:Name="Main">
+
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Padding="20">
+        <Frame Padding="20" HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout Padding="5">
+                <!-- lable biger 2 times than normal, bold -->
+                <Label Text="Color Picker" HorizontalOptions = "Center">
+                    <!-- mac, windows are in the same group, ios, android are in the same group -->
+                    <Label.FontSize>
+                        40
+                    </Label.FontSize>
+                </Label>
+                <Label Text = "Red Value" HorizontalOptions = "Start"/>
+                <Slider x:Name="RedSlider" ValueChanged="OnSliderValueChanged"/>
+                <Label Text = "Green Value" HorizontalOptions = "Start"/>
+                <Slider x:Name="GreenSlider" ValueChanged="OnSliderValueChanged" />
+                <Label Text = "Blue Value" HorizontalOptions = "Start"/>
+                <Slider x:Name="BlueSlider" ValueChanged="OnSliderValueChanged" />
+            </StackLayout>
+        </Frame>
+        <Frame CornerRadius="20" HorizontalOptions="Center" VerticalOptions="Center">
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+                <Label Text="Color" x:Name="ColorGenerate" VerticalOptions="Center"/>
+                <Frame x:Name="ColorImage" WidthRequest="40" HeightRequest="40"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>
